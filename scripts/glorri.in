@@ -1,0 +1,33 @@
+#!@GUILE@ --no-auto-compile
+-*- scheme -*-
+!#
+;;; Glorri --- Lorri, but in Guile for Guix
+;;; Copyright © 2023 Karl Hallsby <karl@hallsby.com>
+;;;
+;;; This file is part of Glorri.
+;;;
+;;; Glorri is free software; you can redistribute it and/or modify it
+;;; under the terms of the GNU General Public License as published by
+;;; the Free Software Foundation; either version 3 of the License, or
+;;; (at your option) any later version.
+;;;
+;;; Glorri is distributed in the hope that it will be useful, but
+;;; WITHOUT ANY WARRANTY; without even the implied warranty of
+;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;;; General Public License for more details.
+;;;
+;;; You should have received a copy of the GNU General Public License
+;;; along with Glorri.  If not, see <http://www.gnu.org/licenses/>.
+
+(define-syntax-rule (push! elt v) (set! v (cons elt v)))
+
+;; Automatically add Glorri modules to Guile's load path so that users
+;; aren't wondering why Glorri isn't working when the modules aren't
+;; installed to Guile's default module locations.
+(unless (getenv "GLORRI_UNINSTALLED")
+  (push! "@guilemoduledir@" %load-path)
+  (push! "@guileobjectdir@" %load-compiled-path))
+
+(use-modules (glorri))
+
+(apply glorri-main (command-line))
