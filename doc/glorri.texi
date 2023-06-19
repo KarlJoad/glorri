@@ -37,6 +37,7 @@ Documentation License''.
 @menu
 * Operations::                  The operations that Glorri supports.
 * Daemon::                      The Glorri daemon.
+* Socket::                      Communicating with the daemon.
 * Contributing::                You can help too!
 @end menu
 
@@ -45,6 +46,9 @@ Documentation License''.
 
 @node Daemon
 @chapter Daemon
+
+@node Socket
+@chapter Socket
 
 @node Contributing
 @chapter Contributing
