@@ -36,11 +36,15 @@ Documentation License''.
 
 @menu
 * Operations::                  The operations that Glorri supports.
+* Daemon::                      The Glorri daemon.
 * Contributing::                You can help too!
 @end menu
 
 @node Operations
 @chapter Operations
+
+@node Daemon
+@chapter Daemon
 
 @node Contributing
 @chapter Contributing
