@@ -35,8 +35,12 @@ Documentation License''.
 @top Glorri
 
 @menu
+* Operations::                  The operations that Glorri supports.
 * Contributing::                You can help too!
 @end menu
+
+@node Operations
+@chapter Operations
 
 @node Contributing
 @chapter Contributing
