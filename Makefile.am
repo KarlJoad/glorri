@@ -55,3 +55,5 @@ SUFFIXES = .scm .go
 CLEANFILES =                                    \
   $(GOBJECTS)                                   \
   $(TESTS:tests/%.scm=%.log)
+
+include doc/local.mk
