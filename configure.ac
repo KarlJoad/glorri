@@ -1,4 +1,4 @@
-AC_INIT([Glorri], [0.1])
+AC_INIT([Glorri], [0.0.0])
 AC_CONFIG_SRCDIR([glorri.scm])
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([color-tests parallel-tests -Wall -Werror foreign])
